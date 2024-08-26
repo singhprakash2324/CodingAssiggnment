@@ -1,0 +1,45 @@
+// Write a C++ program that takes two strings as input from the user and concatenates them. Then, output the concatenated string.
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    string word1;
+    string word2;
+    cin>>word1;
+    cin>>word2;
+    
+    cout<<word1+word2<<endl;
+}
+
+Write a C++ program that takes five grades (integers) as input from the user and calculates the average grade. Output the average grade to the user.
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    
+    int a,b,c,d,e;
+    cout<<"Enter grade 1 :: ";
+    cin>>a;
+    cout<<"Enter grade 2 :: ";
+    cin>>b;
+    cout<<"Enter grade 3 :: ";
+    cin>>c;
+    cout<<"Enter grade 4 :: ";
+    cin>>d;
+    cout<<"Enter grade 5 :: ";
+    cin>>e;
+   
+    
+    float avg=0;
+    
+    float sum=a+b+c+d+e;
+    
+    avg=sum/5;
+    
+    cout<<"average of five grade is :: "<<avg;
+    
+    return 0;
+  
+}
