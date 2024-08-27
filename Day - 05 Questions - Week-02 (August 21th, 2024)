@@ -1,0 +1,82 @@
+Ques-01 Write a C++ function that checks whether an integer is odd or even. If the integer is odd, print "Odd"; otherwise, print "Even."
+
+#include <iostream>
+using namespace std;
+
+// Function to check if a number is odd or even
+void checkOddOrEven(int num) {
+    if (num % 2 == 0) {
+        cout << "Even" << endl;
+    } else {
+        cout << "Odd" << endl;
+    }
+}
+
+int main() {
+    int number;
+
+    // Taking input from the user
+    cout << "Enter an integer: ";
+    cin >> number;
+
+    // Checking if the number is odd or even
+    checkOddOrEven(number);
+
+    return 0;
+}
+
+Ques-02 Write a C++ function that takes a string as input and reverses it.
+
+#include <iostream>
+#include <string>
+#include <algorithm> // Include the algorithm header
+
+using namespace std;
+
+int main() {
+    string word;
+    cin>>word;
+    reverse(word.begin(), word.end());
+    cout << word << endl;
+    return 0;
+}
+
+Ques-03 Write a C++ function that takes a string as a parameter and checks how many vowels and consonants are in that string.
+Assuming that string contains only lowercase.
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+void count_V_and_C(const string& str, int& vowelCount, int& consonantCount) {
+    vowelCount = 0;
+    consonantCount = 0;
+
+    for (char ch : str) {
+        if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+            ++vowelCount;
+        } else if (ch >= 'b' && ch <= 'z') { 
+            ++consonantCount;
+        }
+    }
+}
+
+int main() {
+    string input;
+    int vowels = 0, consonants = 0;
+
+
+    cout << "Enter a string (lowercase letters only): ";
+    cin >> input;
+
+
+    count_V_and_C(input, vowels, consonants);
+
+
+    cout << "Number of vowels: " << vowels << endl;
+    cout << "Number of consonants: " << consonants << endl;
+
+    return 0;
+}
+
+
