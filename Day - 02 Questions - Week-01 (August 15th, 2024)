@@ -1,0 +1,109 @@
+Ques-01: Write a C++ program that takes three integers as input from the user and determines the largest of the three using if-else statements.
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a, b, c;
+
+    cout << "Enter three integers: ";
+    cin >> a >> b >> c;
+
+    // Determine the largest number using if-else statements
+    if (a >= b && a >= c) {
+        cout << a << " is the largest number." << endl;
+    } else if (b >= a && b >= c) {
+        cout << b << " is the largest number." << endl;
+    } else {
+        cout << c << " is the largest number." << endl;
+    }
+
+    return 0;
+}
+
+
+Ques-02: Write a C++ program that takes an integer score (0-100) as input from the user and prints the corresponding grade using if-else-if statements.
+
+#include <iostream>
+
+int main() {
+    int score;
+    
+    std::cout << "Enter your score (0-100): ";
+    std::cin >> score;
+
+    if (score < 0 || score > 100) {
+        std::cout << "Invalid score. Please enter a value between 0 and 100." << std::endl;
+    } else if (score >= 90) {
+        std::cout << "Grade: A" << std::endl;
+    } else if (score >= 80) {
+        std::cout << "Grade: B" << std::endl;
+    } else if (score >= 70) {
+        std::cout << "Grade: C" << std::endl;
+    } else if (score >= 60) {
+        std::cout << "Grade: D" << std::endl;
+    } else {
+        std::cout << "Grade: F" << std::endl;
+    }
+
+    return 0;
+}
+
+Ques-03:  Write a C++ program that takes an integer as input from the user and prints the corresponding month of the year using a switch case statement. 
+Assume 1 = January, 2 = February, ..., 12 = December.If integer is not from 1 to 12 then print invalid.
+
+#include <iostream>
+
+int main() {
+    int monthNumber;
+
+    std::cout << "Enter an integer (1-12) to get the corresponding month: ";
+    std::cin >> monthNumber;
+
+    switch (monthNumber) {
+        case 1:
+            std::cout << "January" << std::endl;
+            break;
+        case 2:
+            std::cout << "February" << std::endl;
+            break;
+        case 3:
+            std::cout << "March" << std::endl;
+            break;
+        case 4:
+            std::cout << "April" << std::endl;
+            break;
+        case 5:
+            std::cout << "May" << std::endl;
+            break;
+        case 6:
+            std::cout << "June" << std::endl;
+            break;
+        case 7:
+            std::cout << "July" << std::endl;
+            break;
+        case 8:
+            std::cout << "August" << std::endl;
+            break;
+        case 9:
+            std::cout << "September" << std::endl;
+            break;
+        case 10:
+            std::cout << "October" << std::endl;
+            break;
+        case 11:
+            std::cout << "November" << std::endl;
+            break;
+        case 12:
+            std::cout << "December" << std::endl;
+            break;
+        default:
+            std::cout << "Invalid input. Please enter a number between 1 and 12." << std::endl;
+            break;
+    }
+
+    return 0;
+}
+
+
+
