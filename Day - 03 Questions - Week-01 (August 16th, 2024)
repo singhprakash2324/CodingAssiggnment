@@ -1,0 +1,63 @@
+Ques-01: Write a C++ program that takes an integer N as input from the user and calculates the sum of the first N natural numbers using a for loop.
+
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    
+    int n;
+    cout<<"Enter value of N:: ";
+    cin>>n;
+    int sum=0;
+    
+    for (int i=0; i<=n; i++){
+        sum=sum+i;
+    }
+    cout << sum<<" the sum of the first N natural numbers";
+    
+    return 0;
+}
+
+Ques-02: Write a C++ program that takes an integer N as input from the user and calculates the factorial of N using a loop.
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int N;
+    unsigned long long factorial = 1;  // Using unsigned long long to handle large numbers
+
+    cout << "Enter a non-negative integer to calculate its factorial: ";
+    cin >> N;
+
+    if (N < 0) {
+        cout << "Invalid input. Please enter a non-negative integer." <<endl;
+    } else {
+        for (int i = 1; i <= N; ++i) {
+            factorial *= i;
+        }
+        std::cout << "Factorial of " << N << " is " << factorial << std::endl;
+    }
+
+    return 0;
+}
+
+Ques-03: Write a C++ program that takes an integer N as input from the user and prints the multiplication table of N up to 10 using a loop.
+#include <iostream>
+using namespace std;
+
+int main() {
+    int N;
+
+    // Taking input from the user
+    cout << "Enter an integer: ";
+    cin >> N;
+
+    // Loop to print the multiplication table
+    for (int i = 1; i <= 10; ++i) {
+        cout << N << " * " << i << " = " << N * i << endl;
+    }
+
+    return 0;
+}
