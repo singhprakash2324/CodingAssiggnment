@@ -1,0 +1,37 @@
+Ques 1: Write a C++ program that declares an integer variable, initializes it, and then declares a pointer that stores the address of this variable.
+Print the value of the variable using both the variable itself and the pointer.
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    
+    int a=10;
+    int* ptr=&a;
+    
+    int &b=a;
+    
+    cout<<a<<endl;
+    cout<<&a<<endl;
+    cout<<ptr<<endl;
+    cout<<b;  
+    return 0;
+}
+Ques 2: Write a program that declares an array of integers and a pointer that points to the first element of the array. 
+        Use pointer arithmetic to print all the elements of the array.
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int arr[] = {10, 20, 30, 40, 50};
+    int *ptr = arr; // Pointer pointing to the first element of the array
+
+    cout << "Elements of the array:\n";
+    for (int i = 0; i < 5; i++) {
+        cout << *(ptr + i) << endl; // Using pointer arithmetic to access elements
+    }
+
+    return 0;
+}
