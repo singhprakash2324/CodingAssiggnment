@@ -1,0 +1,84 @@
+Ques 1: Write a function int stringLength(const std::string &str) that returns the length of a given string. Test your function with various strings in the main() function.
+
+Sample Input:- str1 = "Hello, World!"
+Output:- 13
+
+
+#include <iostream>
+using namespace std;
+
+int countstring(string str) {
+    return str.length();
+}
+
+int main() {
+    string str;
+    getline(cin, str);  // To read a full line including spaces
+    
+    cout << "Length of the string is: " << countstring(str) << endl;
+
+    return 0;
+}
+
+
+Ques 2: Implement a function int countCharacter(const std::string &str, char ch) that counts the number of occurrences of a specific character in a given string. Test the function with different strings and characters.
+
+Sample Input:- String ="Hello, World!"
+character=’l’
+Output:- 3
+
+
+
+#include <iostream>
+using namespace std;
+
+int countstring(string str,char str1){
+    int count=0;
+    for(int i=0;i<str.length();i++){
+    
+        if(str1==str[i]){
+            count++;
+        }
+    }
+    return count;
+}
+int main(){
+    string str;
+    cout<<"enter the word ::  ";
+    getline(cin,str);
+    char str1;
+    cout<<"enter character want to check ::  ";
+    cin>>str1;
+    
+   
+    cout<<countstring(str,str1);
+    return 0;
+}
+
+
+Ques 3: Write a function std::string concatenateStrings(const std::string &str1, const std::string &str2) that concatenates two strings and returns the result. Test the function with various input strings.
+
+Sample Input : - str1 = "Hello, "
+str2 = "World!"
+
+Sample Output :- "Hello, World!"
+
+
+#include <iostream>
+using namespace std;
+
+string concatenatestring(string str,string str1){
+    string result=str+str1;
+    return result;
+}
+
+int main(){
+    string str;
+    cin>>str;
+    
+    string str1;
+    cin>>str1;
+   
+    cout<<concatenatestring(str,str1);
+    return 0;
+}
